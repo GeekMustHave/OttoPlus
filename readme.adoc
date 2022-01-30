@@ -253,13 +253,13 @@ How to customize the physical Otto https://www.ottodiy.com/blog/design[4 easy wa
 
 OTTO Ardunio library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
 
-OTTO BLockly program: link fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
+OTTO BLockly program: link:fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
 
 Ardunio V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
 
-OTTO requires current Java runtime link: /fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
+OTTO requires current Java runtime link:/fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
 
-
+3D Printing STL file for extra body for OTTO link:/fileslarge/OttoDIYEyesHeadV13.stl[Download, window='_blank']
 
 ]
 
@@ -272,6 +272,7 @@ OTTO requires current Java runtime link: /fileslarge/jre-8u321-windows-x64.exe[D
 [cols='2,2,2,6' options='header']
 |===
 | Date  | Version | Author | Description
+| 01/30/2022 | V2.1d | JHRS | Updates after the rework of the construction and valid testing
 | 01/25/2022 | V2.1c | JHRS | Updates after initial construction and testing
 | 01/13/2022 | V2.1b | JHRS |  Initial version
 |===

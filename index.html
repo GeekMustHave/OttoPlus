@@ -139,7 +139,7 @@ kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-bl
 .menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
 b.button::before{content:"[";padding:0 3px 0 2px}
-b.button::after{content:"]";padding:0 2px 0 3px}     
+b.button::after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
 #header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
 #header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
@@ -464,14 +464,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_determine_and_set_comm_port">4.1.1. Determine and set Comm port</a></li>
 <li><a href="#_sample_ardunio_script">4.1.2. Sample Ardunio Script</a></li>
-<li><a href="#_servo_alignment">4.1.3. Servo Alignment</a></li>
 </ul>
 </li>
-<li><a href="#_blockly">4.2. Blockly</a></li>
 </ul>
 </li>
-<li><a href="#_references">5. References</a></li>
-<li><a href="#_document_history">6. Document History</a></li>
 </ul>
 </div>
 </div>
@@ -600,6 +596,28 @@ difficult to get out</p>
 </ul>
 </div>
 <div class="paragraph">
+<p>Some of the modifications done</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Made the jumpers between the bottom abd top longer to make wiring simpler and more reliable</p>
+</li>
+<li>
+<p>Glue (UV Glue for me) the jumpers to the Pizo speaker</p>
+</li>
+<li>
+<p>Place the Bluetooth module on top of the Motor controller board</p>
+</li>
+<li>
+<p>Glue(UV Glue) the power switch, Test it first before glueing, I destroyed the switch that came with the kit</p>
+</li>
+<li>
+<p>Test the Motor control board with just the servos attached, do alignment, then wire the rest of the modules</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>The following videos from Robot Creation are very useful in the build process.</p>
 </div>
 <div class="videoblock text-center">
@@ -676,7 +694,7 @@ difficult to get out</p>
 <p>Otto can be programmed using Arduino or Blockly (GUI), started with Arduino because I&#8217;m a masochist.</p>
 </div>
 <div class="paragraph">
-<p>Blockly is a great alternative if you are not comfortable with Arduino, just be prepared for many of the <code>sketches</code> to not work properly.</p>
+<p>Blockly is a great alternative if you are not comfortable with Arduino, just be prepared for many of the example <code>sketches</code> to not work properly.</p>
 </div>
 <div class="paragraph">
 <p>Blockly sketches can be viewed and copied as the Arduino C++ code, and used directly in the Arduino IDE.</p>
@@ -778,30 +796,35 @@ The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a
 <div class="paragraph">
 <p>There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.</p>
 </div>
-<div class="listingblock">
+<div class="paragraph">
 <div class="title">Sample servo test</div>
-<div class="content">
-<pre>/*
-base info from https://www.arduino.cc/en/Reference/Servo
+<p>----P
+/*
+base info from <a href="https://www.arduino.cc/en/Reference/Servo" class="bare">https://www.arduino.cc/en/Reference/Servo</a>
 test sketch made by Nicu FLORICA (niq_ro) for verify position for Otto legs  
 */
-#include &lt;Servo.h&gt;
-
-Servo myservo1;  // create servo object to control a servo 1
+#include &lt;Servo.h&gt;</p>
+</div>
+<div class="paragraph">
+<p>Servo myservo1;  // create servo object to control a servo 1
 Servo myservo2;  // create servo object to control a servo 2
 Servo myservo3;  // create servo object to control a servo 3
-Servo myservo4;  // create servo object to control a servo 4
-
-int minim = 10;
-int maxim = 170;
-
-void setup() {
+Servo myservo4;  // create servo object to control a servo 4</p>
+</div>
+<div class="paragraph">
+<p>int minim = 10;
+int maxim = 170;</p>
+</div>
+<div class="paragraph">
+<p>void setup() {
   myservo1.attach(2);  // attaches the servo on pin 2 to the servo object 1
   myservo2.attach(3);  // attaches the servo on pin 3 to the servo object 2 
   myservo3.attach(4);  // attaches the servo on pin 4 to the servo object 3
-  myservo4.attach(5);  // attaches the servo on pin 5 to the servo object 4 
-
-  myservo1.write(minim);                  // sets the servo 1 position 
+  myservo4.attach(5);  // attaches the servo on pin 5 to the servo object 4 </p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  myservo1.write(minim);                  // sets the servo 1 position 
   myservo2.write(minim);                  // sets the servo 2 position
   myservo3.write(minim);                  // sets the servo 3 position 
   myservo4.write(minim);                  // sets the servo 4 position
@@ -811,121 +834,129 @@ delay(3000);
   myservo3.write(maxim);                  // sets the servo 3 position 
   myservo4.write(maxim);                  // sets the servo 4 position
 delay(3000);
-}
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>void loop() {</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>myservo1.write(90);                  // sets the servo 1 position 
+myservo2.write(90);                  // sets the servo 2 position
+myservo3.write(90);                  // sets the servo 3 position 
+myservo4.write(90);                  // sets the servo 4 position</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>}</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>A offline copy of the servo test can be downloaded from this link:files/Otto_ServoTest.ino[link, windows='_blank']
 
-void loop() {
+This test will move the servos to the Left, then to the right, then back to center.
 
-  myservo1.write(90);                  // sets the servo 1 position 
-  myservo2.write(90);                  // sets the servo 2 position
-  myservo3.write(90);                  // sets the servo 3 position 
-  myservo4.write(90);                  // sets the servo 4 position
+CAUTION: This script could cause the legs to rotate to far to the left or right causing the servo arm to get stripped.  PITA.
 
-  }</pre>
+==== Servo Alignment
+
+Alignment is *Critical!!*, this step can *not* be skipped.
+
+The legs are aligned separately from the feet.
+
+After the alignment of the legs/Feet are complete the setting must be written into memory, so when the Otto is restarted it has the proper `Home` position.
+
+There are two scripts in the `Examples`
+
+=== Blockly
+
+There are two `BLOC` example scripts to help test the assembled Otto.
+
+Alignment Serial - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.
+
+Alignment Walk - Test Otto walking, check Otto walks straight as possible.
+
+There are other BLOC's to test the Pizo speaker, touch sensor and the ultrasonic sensor
+
+The Dance BLOC is a very good script to show Otto dancing, great way to check Otto working
+
+By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was designed.
+
+.BLOC Diagram
+[Source,bash]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>A offline copy of the servo test can be downloaded from this <a href="files/Otto_ServoTest.ino">link</a></p>
+<p>image of BLOC script</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>This OTTO BLOC can be downloaded from this link:files/????.bloc[Link,window="_blank"]
+
+When the BLOC is converted to C++ to Otto it looks like
+
+.Dance script C++
+[Source,bash]</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>This test will move the servos to the Left, then to the right, then back to center.</p>
+<p>??? put arduino code here</p>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-This script could cause the legs to rotate to far to the left or right causing the servo arm to get stripped.  PITA.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_servo_alignment">4.1.3. Servo Alignment</h4>
-<div class="paragraph">
-<p>Alignment is <strong>Critical!!</strong>, this step can <strong>not</strong> be skipped.</p>
-</div>
-<div class="paragraph">
-<p>The legs are aligned separately from the feet.</p>
-</div>
-<div class="paragraph">
-<p>After the alignment of the legs/Feet are complete the setting must be written into memory, so when the Otto is restarted it has the proper <code>Home</code> position.</p>
-</div>
-<div class="paragraph">
-<p>There are two scripts in the <code>Examples</code></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_blockly">4.2. Blockly</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Do not use the Alignment script in the examples option of Blockly, code has errors in it.
-</td>
-</tr>
-</table>
-</div>
-<div style="page-break-after: always;"></div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;&lt;&lt;&lt;
+== References
+
+How to customize the physical Otto https://www.ottodiy.com/blog/design[4 easy ways to design your own robot, window='_blank']
+
+OTTO Ardunio library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
+
+OTTO BLockly program: link fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
+
+Ardunio V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
+
+OTTO requires current Java runtime link: /fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
+
+
+
+]
+
+
+
+&lt;&lt;&lt;&lt;
+== Document History
+
+.Document History
+[cols='2,2,2,6' options='header']
+|===
+| Date  | Version | Author | Description
+| 01/25/2022 | V2.1c | JHRS | Updates after initial construction and testing
+| 01/13/2022 | V2.1b | JHRS |  Initial version
+|===
+
+
+
+
+////
+This template created by GeekMustHave
+04/30/2021  Update for simple blog posts, changes parms to p-parmname
+03/14/2021  First good update, prep for Hugo
+02/12/2019  Initial version
+////</pre>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_references">5. References</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>How to customize the physical Otto <a href="https://www.ottodiy.com/blog/design" target="_blank" rel="noopener">4 easy ways to design your own robot</a></p>
 </div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_document_history">6. Document History</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Document History</caption>
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 16.6666%;">
-<col style="width: 50.0002%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Date</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Author</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">01/25/2022</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V2.1c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JHRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Updates after initial construction and testing</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">01/13/2022</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">V2.1b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JHRS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initial version</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 2.1c<br>
-Last updated 2022-01-26 13:43:22 -0500
+Last updated 2022-01-30 10:49:52 -0500
 </div>
 </div>
 </body>
