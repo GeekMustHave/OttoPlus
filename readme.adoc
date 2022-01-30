@@ -1,0 +1,294 @@
+= Otto One Robot +++<br>+++ GMH Notes
+John Schuster <John.schuster@PhoenixWorkgroup.com>
+v2.1c, 01/25/2022: Notes
+:Author: John HR Schuster
+:Company: GeekMustHave
+:toc: left
+:toclevels: 4
+:title-page:
+:title-logo-image: ./images/create-doco_gmh-standard-cover.png
+:imagesdir: ./images
+:docsdir: ./documents
+:filesdir: ./files
+:pagenums:
+:numbered: 
+:chapter-label:  
+:experimental:
+:source-hightlighter: highlight.js
+:highlightjs-languages: javascript, powershell
+:icons: font
+:github: https://github.com/GeekMustHave/OttoPlus
+:web-site: https://OpenStuff.pwc-lms.com/BlogPosts/OttoPlus
+:linkattrs:
+:seclinks:
+:description: These are project notes for the Otto Plus robot \
+and an introduction to Blockly (GUI) Based programming and Arduino C++ coding
+:author: John HR Schuster
+:keywords: Otto, Otto Plus, Blockly
+:email: GeekMustHave@PhoenixWorkgroup.com 
+:hugo: true
+:page-title: Otto One Robot<+++br+++>GMH Notes
+:page-image: ./images/create-doco_gmh-standard-cover.png
+:page-tags: Otto, Otto Plus, Blockly
+:page-Date: 01/13/2022  
+
+Otto Plus builder construction, programming and expansion notes.
+This is not a `How To` guide it is a set of notes to help when this project is referenced in the future.
+
+To view a PDF version of this document click this link:./readme.pdf[Link]  
+
+The GitHub Repository is located at this link:{github}[Link, window='_blank']
+
+The GeekMustHave Blog Post (where all the Videos and files are available) is located at this link:{web-site}[Link,window='_blank']
+
+NOTE: When viewing this from GitHub there will be *No* embedded videos.
+
+NOTE: When viewing this from GitHub some of the local files and videos may *not* be available because they are too large.
+
+image::otto.png[Cute Otto, alt='Alt Tag', align='center']
+
+ 
+
+<<<<
+
+== Introduction
+
+This is the first project for 2022.  Happy New Year, hopefully we will be out of the Human Malware (Covid-19).
+
+The how to build videos and examples were a bit difficult to understand.
+There didn't appear to be any reference to the Microphone and Bluetooth modules.
+
+A Otto repository was created to capture everything about Otto in one place.
+This will include PDF rendered documents, YouTube Videos and software libraries.
+
+== Construction
+
+This is not a 2 hour build, it is more like a 3-4 hour build.
+
+The screwdriver provided with the kit is nice but you might need the following
+
+* Diagonal cutter, flush cut
+* Rotary Tool
+* Extra screws (They seem to vanish into another dimension)
+* Hot glue
+* Hammer (Utter frustration)
+
+Some observations on the construction
+
+* Test fit *ALL* parts like buzzer, on/off switch.  There will be sanding or dremel required
+* Trim and clean up all the 3d printed parts, it will go much easier later
+* Build the bottom first, align the servos
+* Enlarge the holes for the power jack and USB jack, they do not align easily
+* Get a better screwdriver or end up with a lot of useless phillips head screw
+difficult to get out
+* Test fit the motor control board into the case with *NO* jumpers attached
+* Touch sensor needs to be installed, taped in place, before fitting motor controller board
+* Testing the alignment may cause a leg to get stuck and in turn strip the servo arms.
+
+Some of the modifications done
+
+* Made the jumpers between the bottom abd top longer to make wiring simpler and more reliable
+* Glue (UV Glue for me) the jumpers to the Pizo speaker
+* Place the Bluetooth module on top of the Motor controller board
+* Glue(UV Glue) the power switch, Test it first before glueing, I destroyed the switch that came with the kit
+* Test the Motor control board with just the servos attached, do alignment, then wire the rest of the modules
+
+
+
+The following videos from Robot Creation are very useful in the build process.
+
+.Robot Creations Part 2 of 4
+video::fxjK85jrM7k[youtube, width=640, height=480, start=0, end=999999, align='center']
+
+The video above can be viewed offline from this link::/videos/OttoDIY build Pt-2 mp4[Otto servo positioning]
+
+.Robot Creations Part 3 of 4
+video::bzleDyvgUiw[youtube, width=640, height=480, start=0, end=999999, align='center']
+
+
+The following are segments of videos that help in some critical tasks
+
+.Board and boot loader settings
+video::fxjK85jrM7k[youtube, width=640, height=480, start=103, end=999999, align='center']
+
+.Right/Lift orientation
+video::bzleDyvgUiw[youtube, width=640, height=480, start=237, end=999999, align='center']
+
+<<<<
+
+== Wiring
+
+The Otto Plus has two extra modules
+
+. Bluetooth communication
+. Microphone
+
+One of the frustrating things was the locating the wiring diagram for these two modules.
+
+The diagram was located in the V10 construction Guide, which is at this offline link:documents/OttoDIY_Manual_V10.pdf[ link]
+
+The actual wiring diagram is on page 18.
+
+.Otto Plus Wiring
+image::ottoplus_wiring.png[Otto Plus Wiring, alt='Alt Tag', align='center']
+ 
+<<<<
+
+== Programming
+
+Otto can be programmed using Arduino or Blockly (GUI), started with Arduino because I'm a masochist.
+
+Blockly is a great alternative if you are not comfortable with Arduino, just be prepared for many of the example `sketches` to not work properly.
+
+Blockly sketches can be viewed and copied as the Arduino C++ code, and used directly in the Arduino IDE.
+
+
+
+=== Arduino
+
+The most current version of the Ardunio IDE as of this document date is 1.8.19 and can be downloaded from this link:files/arduino-1.8.19-windows.exe[Link, window='_blank']
+
+To download the most current version of the Ardunio IDE use this web https://www.arduino.cc/en/software[Link,window='_blank']
+
+In order to use Arduino to upload code to Otto the Arduino libraries need to be installed.
+
+There is a video on `How to Calibrate Otto DIY` outlines the Arduino libraries process.  Unfortunately the Zip file discussed in this video has not been located.
+
+The `How to Calibrate Otto DIY` video can be viewed or downloaded from this link::videos/CalibrateOtto.mp4[Video Link, window="_blank"]
+
+.Calibrate Otto
+video::videos/Calibrate Otto.mp4.mp4[Calibrate Otto, width=640, height=480, start=0, end=999999, align='center']
+
+
+
+Download the *latest* version of the Otto library from GIT at this https://github.com/OttoDIY/OttoDIYLib[Link, window='_blank']
+
+There is a local copy of the Arduino library in these notes at this link:files/OttoDIYLib-master.zip[Link, window='_blank']
+
+. Download the .zip Otto libraries here
+. Open Arduino IDE and navigate to Sketch -> Include Library -> Add .ZIP Library. At the top of the drop down list, select the option to `Add .ZIP Library`
+. You will be prompted to select the library. Navigate to the .zip file's location, that you just downloaded and open it.
+. In the main window you will see in the bottom back area a message that it has been installed.
+. To verify they are properly installed, go to Sketch -> Include Library menu. You should now see the library at the bottom of the drop-down menu That means is ready to use Otto example codes! you can find them in File -> Examples -> OttoDIYLib for more details or other way to install libraries visit this link
+
+
+IMPORTANT: Set the device to `Ardunio Nano` for Otto.
+
+IMPORTANT:  The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a clone.
+
+==== Determine and set Comm port
+
+The Ardunio IDE when used with the USB Port is assigned to a Comm port.
+
+Open the Device Manager and then click on the `Ports (Comm  & LPT)` there may be some ports already assigned to other serial devices.
+
+Plug in Blockly to a USB port, listen for the Window beep acknowledging Blockly,  and watch the `Ports (Comm  & LPT)` for a new comm port to be assigned.
+
+.Ports
+image::ports.png[Comm Ports, alt='Alt Tag', align='center']  
+
+
+==== Sample Ardunio Script
+
+There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.
+
+.Sample servo test
+----P
+include::files/Otto_ServoTest.ino[Servo Test]
+----
+
+A offline copy of the servo test can be downloaded from this link:files/Otto_ServoTest.ino[link, windows='_blank']
+
+This test will move the servos to the Left, then to the right, then back to center.
+
+CAUTION: This script could cause the legs to rotate to far to the left or right causing the servo arm to get stripped.  PITA.
+
+==== Servo Alignment
+
+Alignment is *Critical!!*, this step can *not* be skipped.
+
+The legs are aligned separately from the feet.
+
+After the alignment of the legs/Feet are complete the setting must be written into memory, so when the Otto is restarted it has the proper `Home` position.
+
+There are two scripts in the `Examples` 
+
+=== Blockly  
+
+There are two `BLOC` example scripts to help test the assembled Otto.
+
+Alignment Serial - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.
+
+Alignment Walk - Test Otto walking, check Otto walks straight as possible.
+
+There are other BLOC's to test the Pizo speaker, touch sensor and the ultrasonic sensor
+
+The Dance BLOC is a very good script to show Otto dancing, great way to check Otto working
+
+By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was designed.
+
+.BLOC Diagram
+[Source,bash]
+----
+image of BLOC script
+----
+
+This OTTO BLOC can be downloaded from this link:files/????.bloc[Link,window="_blank"]
+
+When the BLOC is converted to C++ to Otto it looks like
+
+.Dance script C++
+[Source,bash]
+----
+??? put arduino code here
+----
+
+
+
+
+<<<<
+== References
+
+How to customize the physical Otto https://www.ottodiy.com/blog/design[4 easy ways to design your own robot, window='_blank']
+
+OTTO Ardunio library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
+
+OTTO BLockly program: link fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
+
+Ardunio V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
+
+OTTO requires current Java runtime link: /fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
+
+
+
+]
+
+
+
+<<<<
+== Document History
+
+.Document History
+[cols='2,2,2,6' options='header']
+|===
+| Date  | Version | Author | Description
+| 01/25/2022 | V2.1c | JHRS | Updates after initial construction and testing
+| 01/13/2022 | V2.1b | JHRS |  Initial version
+|===
+
+
+
+
+////
+This template created by GeekMustHave
+04/30/2021  Update for simple blog posts, changes parms to p-parmname
+03/14/2021  First good update, prep for Hugo
+02/12/2019  Initial version
+////
+
+
+
+
+
+
+
