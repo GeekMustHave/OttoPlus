@@ -218,11 +218,11 @@ After the alignment of the legs/Feet are complete the setting must be written in
 
 There are two `BLOC` example scripts to help test the assembled Otto.
 
-These two scripts are in the `Examples` image:xxyyzz-place-image-here.png[]
+These two scripts are in the `Examples` of Blockly image:xxyyzz-place-image-here.png[]
 
-Alignment Serial - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.
+*Alignment Serial* - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.
 
-Alignment Walk - Test Otto walking, check Otto walks straight as possible.
+*Alignment Walk* - Test Otto walking, check Otto walks straight as possible.
 
 There are other BLOC's to test the Pizo speaker, touch sensor and the ultrasonic sensor
 
@@ -233,7 +233,7 @@ By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was de
 .BLOC Diagram
 image:xxyyzz-place-image-here.png[]
 
-This OTTO BLOC can be downloaded from this link:htts://xxyyzz.com[Link,window="_blank"]
+This OTTO BLOC can be downloaded from this link:https://xxyyzz.com[Link,window="_blank"]
 
 When the BLOC is converted to C++ to Otto it looks like
 
