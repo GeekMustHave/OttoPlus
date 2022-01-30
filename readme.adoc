@@ -1,6 +1,6 @@
 = Otto One Robot +++<br>+++ GMH Notes
 John Schuster <John.schuster@PhoenixWorkgroup.com>
-v2.1c, 01/25/2022: Notes
+v2.1d, 01/30/2022: Notes
 :Author: John HR Schuster
 :Company: GeekMustHave
 :toc: left
@@ -71,6 +71,8 @@ The screwdriver provided with the kit is nice but you might need the following
 * Rotary Tool
 * Extra screws (They seem to vanish into another dimension)
 * Hot glue
+* UV Glue
+* Hobby knife
 * Hammer (Utter frustration)
 
 Some observations on the construction
@@ -151,21 +153,21 @@ The most current version of the Ardunio IDE as of this document date is 1.8.19 a
 To download the most current version of the Ardunio IDE use this web https://www.arduino.cc/en/software[Link,window='_blank']
 
 In order to use Arduino to upload code to Otto the Arduino libraries need to be installed.
-
+////
 There is a video on `How to Calibrate Otto DIY` outlines the Arduino libraries process.  Unfortunately the Zip file discussed in this video has not been located.
 
 The `How to Calibrate Otto DIY` video can be viewed or downloaded from this link::videos/CalibrateOtto.mp4[Video Link, window="_blank"]
 
 .Calibrate Otto
-video::videos/Calibrate Otto.mp4.mp4[Calibrate Otto, width=640, height=480, start=0, end=999999, align='center']
-
+video::videos/CalibrateOtto.mp4[Calibrate Otto, width=640, height=480, start=0, end=999999, align='center']
+////
 
 
 Download the *latest* version of the Otto library from GIT at this https://github.com/OttoDIY/OttoDIYLib[Link, window='_blank']
 
 There is a local copy of the Arduino library in these notes at this link:files/OttoDIYLib-master.zip[Link, window='_blank']
 
-. Download the .zip Otto libraries here
+. Download the .zip Otto libraries here link:fileslarge/OttoDIYLib-master.zip[Download, window='_blank']
 . Open Arduino IDE and navigate to Sketch -> Include Library -> Add .ZIP Library. At the top of the drop down list, select the option to `Add .ZIP Library`
 . You will be prompted to select the library. Navigate to the .zip file's location, that you just downloaded and open it.
 . In the main window you will see in the bottom back area a message that it has been installed.
@@ -193,7 +195,7 @@ image::ports.png[Comm Ports, alt='Alt Tag', align='center']
 There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.
 
 .Sample servo test
-----P
+----
 include::files/Otto_ServoTest.ino[Servo Test]
 ----
 
@@ -203,7 +205,7 @@ This test will move the servos to the Left, then to the right, then back to cent
 
 CAUTION: This script could cause the legs to rotate to far to the left or right causing the servo arm to get stripped.  PITA.
 
-==== Servo Alignment
+=== Servo Alignment
 
 Alignment is *Critical!!*, this step can *not* be skipped.
 
@@ -211,11 +213,12 @@ The legs are aligned separately from the feet.
 
 After the alignment of the legs/Feet are complete the setting must be written into memory, so when the Otto is restarted it has the proper `Home` position.
 
-There are two scripts in the `Examples` 
 
-=== Blockly  
+=== Blockly 
 
 There are two `BLOC` example scripts to help test the assembled Otto.
+
+These two scripts are in the `Examples` image:xxyyzz-place-image-here.png[]
 
 Alignment Serial - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.
 
@@ -228,21 +231,18 @@ The Dance BLOC is a very good script to show Otto dancing, great way to check Ot
 By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was designed.
 
 .BLOC Diagram
-[Source,bash]
-----
-image of BLOC script
-----
+image:xxyyzz-place-image-here.png[]
 
-This OTTO BLOC can be downloaded from this link:files/????.bloc[Link,window="_blank"]
+This OTTO BLOC can be downloaded from this link:htts://xxyyzz.com[Link,window="_blank"]
 
 When the BLOC is converted to C++ to Otto it looks like
+
 
 .Dance script C++
 [Source,bash]
 ----
-??? put arduino code here
+include::files/xxyyzzdummy.txt
 ----
-
 
 
 
