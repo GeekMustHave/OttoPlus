@@ -189,6 +189,13 @@ Open the Device Manager and then click on the `Ports (Comm  & LPT)` there may be
 
 Plug in Blockly to a USB port, listen for the Window beep acknowledging Blockly,  and watch the `Ports (Comm  & LPT)` for a new comm port to be assigned.
 
+[TIP]
+====
+The Comm port number may change over time as the number of Serial devices are used on desktop
+====
+ 
+
+
 .Ports
 image::ports.png[Comm Ports, alt='Alt Tag', align='center']  
 
