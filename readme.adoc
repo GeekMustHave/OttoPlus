@@ -301,7 +301,7 @@ NOTE:  Not all of the file in the table below will be available from the GitHub 
 | OTTO Blockly requires current Java runtime | EXE | link:/fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
 | OTTO Servo test | Arduino Code |link:/files/Otto_ServoTest.ino[Download, window='_blank']
 | 3D Printing STL file for extra body for OTTO | 3D STL | link:/fileslarge/OttoDIYEyesHeadV13.stl[Download, window='_blank']
-| Robot Creations Video Part 2 of 4 | Video MP4 | link:/videos/OttoDIY%20build%20Pt-2.mp4[Download, window='_blank']
+| Robot Creations Video Part 2 of 4 | Video MP4 | link:/videos/OttoDIY build Pt-2.mp4[Download, window='_blank']
 | Robot Creations Video Part 3 of 4 | Video MP4 | link:/videos/OttoDIY%20build%20Pt-3.mp4[Download, window='_blank']
 | Robot Creations Video Part 4 of 4  Best!| Video MP4 | link:/videos/OttoDIY%20build%20Pt-4.mp4[Download, window='_blank']
 |===
