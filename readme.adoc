@@ -172,7 +172,7 @@ There is a local copy of the Arduino library in these notes at this link:files/O
 . You will be prompted to select the library. Navigate to the .zip file's location, that you just downloaded and open it.
 . In the main window you will see in the bottom back area a message that it has been installed.
 . To verify they are properly installed, go to Sketch -> Include Library menu. You should now see the library at the bottom of the drop-down menu That means is ready to use Otto example codes! you can find them in File -> Examples -> OttoDIYLib for more details or other way to install libraries visit this link
-
+  
 
 IMPORTANT: Set the device to `Ardunio Nano` for Otto.
 
