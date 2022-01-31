@@ -102,7 +102,7 @@ The following videos from Robot Creation are very useful in the build process.
 .Robot Creations Part 2 of 4
 video::fxjK85jrM7k[youtube, width=640, height=480, start=0, end=999999, align='center']
 
-The video above can be viewed offline from this http://ftp.pwc-lms.com/BlogPosts/OttoPlus/videos/OttoDIY%20build%20Pt-2.mp4[Otto servo positioning]
+The video above can be viewed offline from this {web-site}/videos/OttoDIY%20build%20Pt-2.mp4[Otto servo positioning]
 
 .Robot Creations Part 3 of 4
 video::bzleDyvgUiw[youtube, width=640, height=480, start=0, end=999999, align='center']
@@ -148,7 +148,7 @@ Blockly sketches can be viewed and copied as the Arduino C++ code, and used dire
 
 === Arduino
 
-The most current version of the Ardunio IDE as of this document date is 1.8.19 and can be downloaded from this link:files/arduino-1.8.19-windows.exe[Link, window='_blank']
+The most current version of the Ardunio IDE as of this document date is 1.8.19 and can be downloaded from this link:{web-site}/files/arduino-1.8.19-windows.exe[Link, window='_blank']
 
 To download the most current version of the Ardunio IDE use this web https://www.arduino.cc/en/software[Link,window='_blank']
 
