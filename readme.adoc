@@ -18,7 +18,7 @@ v2.1d, 01/30/2022: Notes
 :highlightjs-languages: arduino,asciidoc,bash,basic,css,html,javascript,json,perl,php,powershell,python,ruby,sql,shell,text,vba,vbscript,yaml
 :icons: font
 :github: https://github.com/GeekMustHave/OttoPlus
-:web-site: https://OpenStuff.pwc-lms.com/BlogPosts/OttoPlus
+:web-site: https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus
 :linkattrs:
 :seclinks:
 :description: These are project notes for the Otto Plus robot \
