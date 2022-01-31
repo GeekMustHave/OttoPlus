@@ -53,7 +53,7 @@ image::otto.png[Cute Otto, alt='Alt Tag', align='center']
 
 == Introduction
 
-This is the first project for 2022.  Happy New Year, hopefully we will be out of the Human Malware (Covid-19).
+This is the first project for 2022.  Happy New Year, hopefully, soon, we will be out of the Human Malware (Covid-19).
 
 The how to build videos and examples were a bit difficult to understand.
 There didn't appear to be any reference to the Microphone and Bluetooth modules.
@@ -61,12 +61,15 @@ There didn't appear to be any reference to the Microphone and Bluetooth modules.
 A Otto repository was created to capture everything about Otto in one place.
 This will include PDF rendered documents, YouTube Videos and software libraries.
 
+I need one place I can go to in order to get files and videos related to the project.
+
 == Construction
 
 This is not a 2 hour build, it is more like a 3-4 day build.
 
 The screwdriver provided with the kit is nice but you might need the following
 
+* A better screwdriver
 * Diagonal cutter, flush cut
 * Rotary Tool
 * Extra screws (They seem to vanish into another dimension)
@@ -92,7 +95,7 @@ Some of the modifications done
 * Made the jumpers between the bottom abd top longer to make wiring simpler and more reliable
 * Glue (UV Glue for me) the jumpers to the Piezo speaker
 * Place the Bluetooth module on top of the Motor controller board
-* Glue(UV Glue) the power switch, Test it first before glueing, I destroyed the switch that came with the kit
+* Glue(UV Glue saves the day) the power switch, Test it first before glueing, I destroyed the switch that came with the kit
 * Test the Motor control board with just the servos attached, do alignment, then wire the rest of the modules
 
 
