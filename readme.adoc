@@ -289,7 +289,12 @@ OTTO requires current Java runtime link:/fileslarge/jre-8u321-windows-x64.exe[Do
 
 3D Printing STL file for extra body for OTTO link:/fileslarge/OttoDIYEyesHeadV13.stl[Download, window='_blank']
 
-]
+== ASC Doctor Markdown
+
+This document was created using ASCIIDoctor Markdown.
+More information on ASCIIDoctor can be found at https://asciidoctor.org/
+
+If you are interest in the ASC Doctor (ADOC) markdown behind this document, it can be downloaded at this link:readme.adoc[Link]
 
 
 
