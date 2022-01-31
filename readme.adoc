@@ -15,7 +15,7 @@ v2.1d, 01/30/2022: Notes
 :chapter-label:  
 :experimental:
 :source-hightlighter: highlight.js
-:highlightjs-languages: javascript, powershell
+:highlightjs-languages: arduino,asciidoc,bash,basic,css,html,javascript,json,perl,php,powershell,python,ruby,sql,shell,text,vba,vbscript,yaml
 :icons: font
 :github: https://github.com/GeekMustHave/OttoPlus
 :web-site: https://OpenStuff.pwc-lms.com/BlogPosts/OttoPlus
@@ -236,6 +236,32 @@ image:xxyyzz-place-image-here.png[]
 This OTTO BLOC can be downloaded from this link:https://xxyyzz.com[Link,window="_blank"]
 
 When the BLOC is converted to C++ to Otto it looks like
+
+
+== Bluetooth
+
+A special Ardunio script is required for using the OTTO app on the cellphone.
+
+.Bluetooth Script
+[source,arduino]
+----
+Insert code here
+----
+
+
+
+The OTTO app must be downloaded into the phone.
+This app has functions to do movements, play sounds and if an LED matrix attached show emoticons.
+
+
+It is located in the Ardunio examples under OttoDIYLib/Bluetooth/Otto_PLUS_APP_V9.ino.
+
+There is also a Blockly BLOC for testing the bluetooth.
+
+.Bluetooth Setup
+
+video::OVXpNzEQ2tE
+[youtube, width=640, height=480, start=0, end=999999, align='center']
 
 
 .Dance script C++
