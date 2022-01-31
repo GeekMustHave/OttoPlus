@@ -448,8 +448,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">John HR Schuster</span><br>
 <span id="email" class="email"><a href="mailto:GeekMustHave@PhoenixWorkgroup.com">GeekMustHave@PhoenixWorkgroup.com</a></span><br>
-<span id="revnumber">version 2.1d,</span>
-<span id="revdate">01/30/2022</span>
+<span id="revnumber">version 2.1e,</span>
+<span id="revdate">01/31/2022</span>
 <br><span id="revremark">Notes</span>
 </div>
 <div id="toc" class="toc2">
@@ -578,7 +578,7 @@ This will include PDF rendered documents, YouTube Videos and software libraries.
 <p>Hobby knife</p>
 </li>
 <li>
-<p>Hammer (Utter frustration)</p>
+<p>Hammer <strong>(Utter frustration)</strong></p>
 </li>
 </ul>
 </div>
@@ -646,7 +646,7 @@ difficult to get out</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The video above can be viewed offline from this <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/videos/OttoDIY%20build%20Pt-2.mp4">Otto servo positioning</a></p>
+<p>The video above can be viewed offline from this Link:/videos/OttoDIY%20build%20Pt-2.mp4[Otto servo positioning]</p>
 </div>
 <div class="videoblock text-center">
 <div class="title">Robot Creations Part 3 of 4</div>
@@ -713,15 +713,28 @@ difficult to get out</p>
 <p>Otto can be programmed using Arduino or Blockly (GUI), started with Arduino because I&#8217;m a masochist.</p>
 </div>
 <div class="paragraph">
-<p>Blockly is a great alternative if you are not comfortable with Arduino, just be prepared for many of the example <code>sketches</code> to not work properly.</p>
+<p>Blockly is a great alternative if you are not comfortable with Arduino, just be prepared for some of the example <code>sketches</code> to not work properly.</p>
 </div>
 <div class="paragraph">
-<p>Blockly sketches can be viewed and copied as the Arduino C++ code, and used directly in the Arduino IDE.</p>
+<p>Blockly sketches can be viewed and the generated Arduino C++ code can be viewed, and used directly in the Arduino IDE.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Use the Blockly generated Arduino C++ code as templates to help build a powerful Arduino script
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_arduino">4.1. Arduino</h3>
 <div class="paragraph">
-<p>The most current version of the Arduino IDE as of this document date is 1.8.19 and can be downloaded from this <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/files/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Link</a></p>
+<p>The most current version of the Arduino IDE as of this document date is 1.8.19 and can be downloaded from this <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/files/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Link</a>
+There is a new Version 2.o of ths Arduino IDE but at this date it is still in beta.</p>
 </div>
 <div class="paragraph">
 <p>To download the most current version of the Arduino IDE use this web <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Link</a></p>
@@ -730,10 +743,10 @@ difficult to get out</p>
 <p>In order to use Arduino to upload code to Otto the Arduino libraries need to be installed.</p>
 </div>
 <div class="paragraph">
-<p>There is a video on <code>How to Calibrate Otto DIY</code> outlines the Arduino libraries process.  Unfortunately the Zip file discussed in this video has not been located.</p>
+<p>There is a video on <code>How to Calibrate Otto DIY</code> outlines the Arduino libraries process.</p>
 </div>
 <div class="paragraph">
-<p>The <code>How to Calibrate Otto DIY</code> video can be viewed or downloaded from this link::https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/videos/CalibrateOtto.mp4[Video Link, window="_blank"]</p>
+<p>The <code>How to Calibrate Otto DIY</code> video can be viewed or downloaded from this <a href="videos/CalibrateOtto.mp4" target="_blank" rel="noopener">Video Link</a></p>
 </div>
 <div class="videoblock text-center">
 <div class="title">Calibrate Otto</div>
@@ -758,21 +771,21 @@ Your browser does not support the video tag.
 <p>Open Arduino IDE and navigate to Sketch &#8594; Include Library &#8594; Add .ZIP Library. At the top of the drop down list, select the option to <code>Add .ZIP Library</code></p>
 </li>
 <li>
-<p>You will be prompted to select the library. Navigate to the .zip file&#8217;s location, that you just downloaded and open it.</p>
+<p>Select the library. Navigate to the .zip file&#8217;s location, that you just downloaded and open it.</p>
 </li>
 <li>
 <p>In the main window you will see in the bottom back area a message that it has been installed.</p>
 </li>
 <li>
-<p>To verify they are properly installed, go to Sketch &#8594; Include Library menu. You should now see the library at the bottom of the drop-down menu That means is ready to use Otto example codes! you can find them in File &#8594; Examples &#8594; OttoDIYLib for more details or other way to install libraries visit this link</p>
+<p>To verify they are properly installed, go to Sketch &#8594; Include Library menu. The library should be listed at the bottom of the drop-down menu That means is ready to use Otto example codes! They are at File &#8594; Examples &#8594; OttoDIYLib for more details or other way to install libraries visit this link</p>
 </li>
 </ol>
 </div>
-<div class="admonitionblock important">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 Set the device to <code>Arduino Nano</code> for Otto.
@@ -780,11 +793,11 @@ Set the device to <code>Arduino Nano</code> for Otto.
 </tr>
 </table>
 </div>
-<div class="admonitionblock important">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 The Boot loader is the AtMega 328 (Old Boot loader) because the mini in Otto is a clone.
@@ -903,6 +916,27 @@ This script could cause the legs to rotate to far to the left or right causing t
 <p>The legs are aligned separately from the feet.</p>
 </div>
 <div class="paragraph">
+<p>There are two arduino scripts to help with the alignment process,</p>
+</div>
+<div class="paragraph">
+<p><strong>Alignment Serial</strong> - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.</p>
+</div>
+<div class="paragraph">
+<p><strong>Alignment Walk</strong> - Test Otto walking, check Otto walks straight as possible.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use some graph paper to help verify legs are parallel to the body.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p>After the alignment of the legs/Feet are complete the setting must be written into memory, so when the Otto is restarted it has the proper <code>Home</code> position.</p>
 </div>
 </div>
@@ -912,13 +946,10 @@ This script could cause the legs to rotate to far to the left or right causing t
 <p>There are two <code>BLOC</code> example scripts to help test the assembled Otto.</p>
 </div>
 <div class="paragraph">
-<p>These two scripts are in the <code>Examples</code> of Blockly <span class="image"><img src="./images/xxyyzz-place-image-here.png" alt="xxyyzz place image here"></span></p>
+<p>These two scripts are in the <code>Examples</code> of Blockly</p>
 </div>
 <div class="paragraph">
-<p><strong>Alignment Serial</strong> - Align the legs and feet and write the settings into Otto memory.  These settings are used to set Otto to default home position when a new BLOC is started.</p>
-</div>
-<div class="paragraph">
-<p><strong>Alignment Walk</strong> - Test Otto walking, check Otto walks straight as possible.</p>
+<p><span class="image"><img src="./images/xxyyzz-place-image-here.png" alt="xxyyzz place image here"></span></p>
 </div>
 <div class="paragraph">
 <p>There are other BLOC&#8217;s to test the Piezo speaker, touch sensor and the ultrasonic sensor</p>
@@ -939,6 +970,13 @@ This script could cause the legs to rotate to far to the left or right causing t
 <div class="paragraph">
 <p>When the BLOC is converted to C++ to Otto it looks like</p>
 </div>
+<div class="listingblock">
+<div class="title">C++ (Ardunio) Generated from BLOC</div>
+<div class="content">
+<pre class="highlight"><code class="language-ardunio" data-lang="ardunio">Insert code here</code></pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
@@ -1110,6 +1148,12 @@ More information on ASCIIDoctor can be found at <a href="https://asciidoctor.org
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01/31/2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V2.1e</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JHRS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updated all file references, used largefiles directory to avoid GitHub issues</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">01/30/2022</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">V2.1d</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JHRS</p></td>
@@ -1134,8 +1178,8 @@ More information on ASCIIDoctor can be found at <a href="https://asciidoctor.org
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 2.1d<br>
-Last updated 2022-01-31 17:16:52 -0500
+Version 2.1e<br>
+Last updated 2022-01-31 17:32:00 -0500
 </div>
 </div>
 </body>
