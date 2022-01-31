@@ -251,12 +251,14 @@ Insert code here
 
 
 The OTTO app must be downloaded into the phone.
-This app has functions to do movements, play sounds and if an LED matrix attached show emoticons.
+This app has functions to do movements, play sounds, and if an LED matrix is attached show emoticons.
+The code examples can be used to integrate Bluetooth into new scripts.
 
+There is an Arduino script to upload to OTTO, which will enable the Bluetooth function.
 
-It is located in the Ardunio examples under OttoDIYLib/Bluetooth/Otto_PLUS_APP_V9.ino.
+It is located in the Arduino examples under OttoDIYLib / Bluetooth / Otto_PLUS_APP_V9.ino.
 
-There is also a Blockly BLOC for testing the bluetooth.
+There is also a Blockly BLOC for testing the bluetooth functions.
 
 .Bluetooth Setup
 
