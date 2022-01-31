@@ -63,7 +63,7 @@ This will include PDF rendered documents, YouTube Videos and software libraries.
 
 == Construction
 
-This is not a 2 hour build, it is more like a 3-4 hour build.
+This is not a 2 hour build, it is more like a 3-4 day build.
 
 The screwdriver provided with the kit is nice but you might need the following
 
@@ -90,7 +90,7 @@ difficult to get out
 Some of the modifications done
 
 * Made the jumpers between the bottom abd top longer to make wiring simpler and more reliable
-* Glue (UV Glue for me) the jumpers to the Pizo speaker
+* Glue (UV Glue for me) the jumpers to the Piezo speaker
 * Place the Bluetooth module on top of the Motor controller board
 * Glue(UV Glue) the power switch, Test it first before glueing, I destroyed the switch that came with the kit
 * Test the Motor control board with just the servos attached, do alignment, then wire the rest of the modules
@@ -136,7 +136,7 @@ image::ottoplus_wiring.png[Otto Plus Wiring, alt='Alt Tag', align='center']
  
 <<<<
 
-== Programming
+== Programming 
 
 Otto can be programmed using Arduino or Blockly (GUI), started with Arduino because I'm a masochist.
 
@@ -146,7 +146,7 @@ Blockly sketches can be viewed and copied as the Arduino C++ code, and used dire
 
 
 
-=== Arduino
+=== Arduino    
 
 The most current version of the Arduino IDE as of this document date is 1.8.19 and can be downloaded from this link:{web-site}/files/arduino-1.8.19-windows.exe[Link, window='_blank']  
 
@@ -167,7 +167,7 @@ Download the *latest* version of the Otto library from GIT at this https://githu
 
 There is a local copy of the Arduino library in these notes at this link:largefiles/OttoDIYLib-master.zip[Link, window='_blank']
 
-. Download the .zip Otto libraries here link:{web-site}/largefileslarge/OttoDIYLib-master.zip[Download, window='_blank']
+. Download the .zip Otto libraries here link:{web-site}/largefiles/OttoDIYLib-master.zip[Download, window='_blank']
 . Open Arduino IDE and navigate to Sketch -> Include Library -> Add .ZIP Library. At the top of the drop down list, select the option to `Add .ZIP Library`
 . You will be prompted to select the library. Navigate to the .zip file's location, that you just downloaded and open it.
 . In the main window you will see in the bottom back area a message that it has been installed.
@@ -194,7 +194,7 @@ image::ports.png[Comm Ports, alt='Alt Tag', align='center']
 
 There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.
 
-[source,ardunio]
+[source,arduino]
 .Sample servo test
 ----
 include::files/Otto_ServoTest.ino[Servo Test]
@@ -263,14 +263,13 @@ There is also a Blockly BLOC for testing the bluetooth functions.
 
 .Bluetooth Setup
 
-video::OVXpNzEQ2tE
-[youtube, width=640, height=480, start=0, end=999999, align='center']
+video::OVXpNzEQ2tE[youtube, width=640, height=480, start=0, end=999999, align='center']
 
 
 .Dance script C++
 [Source,bash]
 ----
-include::files/xxyyzzdummy.txt
+include:files/xxyyzzdummy.txt
 ----
 
 
@@ -280,22 +279,41 @@ include::files/xxyyzzdummy.txt
 
 How to customize the physical Otto https://www.ottodiy.com/blog/design[4 easy ways to design your own robot, window='_blank']
 
-OTTO Arduino library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
 
-OTTO BLockly program: link:fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
 
-Arduino V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
 
-OTTO requires current Java runtime link:/fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
+<<<<
 
-3D Printing STL file for extra body for OTTO link:/fileslarge/OttoDIYEyesHeadV13.stl[Download, window='_blank']
+
+== Files
+
+NOTE:  Not all of the file in the table below will be available from the GitHub site as there is a 50MB limit.
+
+
+.Files referenced in document
+[cols='10,3,4' options='header']
+|===
+| Description | Type|Download 
+| Calibration Video | Video MP4 | link:videos/CalibrateOtto.mp4[Download, window="_blank"] 
+| OTTO Arduino library | Zip |link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"] 
+| OTTO BLockly program | EXE |link:fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
+| Arduino V1.0 IDE | EXE |link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
+| OTTO Blockly requires current Java runtime | EXE | link:/fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
+| OTTO Servo test | Arduino Code |link:/files/Otto_ServoTest.ino[Download, window='_blank']
+| 3D Printing STL file for extra body for OTTO | 3D STL | link:/fileslarge/OttoDIYEyesHeadV13.stl[Download, window='_blank']
+| Robot Creations Video Part 2 of 4 | Video MP4 | link:/videos/OttoDIY%20build%20Pt-2.mp4[Download, window='_blank']
+| Robot Creations Video Part 3 of 4 | Video MP4 | link:/videos/OttoDIY%20build%20Pt-3.mp4[Download, window='_blank']
+| Robot Creations Video Part 4 of 4  Best!| Video MP4 | link:/videos/OttoDIY%20build%20Pt-4.mp4[Download, window='_blank']
+|===
+
+
 
 == ASC Doctor Markdown
 
 This document was created using ASCIIDoctor Markdown.
 More information on ASCIIDoctor can be found at https://asciidoctor.org/
 
-If you are interest in the ASC Doctor (ADOC) markdown behind this document, it can be downloaded at this link:{web-site}/readme.adoc[Link]
+If you are interested in the ASC Doctor (ADOC) markdown behind this document, it can be downloaded at this link:{web-site}/readme.adoc[Link]
 
 
 
