@@ -294,7 +294,7 @@ OTTO requires current Java runtime link:/fileslarge/jre-8u321-windows-x64.exe[Do
 This document was created using ASCIIDoctor Markdown.
 More information on ASCIIDoctor can be found at https://asciidoctor.org/
 
-If you are interest in the ASC Doctor (ADOC) markdown behind this document, it can be downloaded at this link:https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/readme.adoc[Link]
+If you are interest in the ASC Doctor (ADOC) markdown behind this document, it can be downloaded at this link:{web-site}/readme.adoc[Link]
 
 
 
