@@ -148,39 +148,39 @@ Blockly sketches can be viewed and copied as the Arduino C++ code, and used dire
 
 === Arduino
 
-The most current version of the Ardunio IDE as of this document date is 1.8.19 and can be downloaded from this link:{web-site}/files/arduino-1.8.19-windows.exe[Link, window='_blank']
+The most current version of the Arduino IDE as of this document date is 1.8.19 and can be downloaded from this link:{web-site}/files/arduino-1.8.19-windows.exe[Link, window='_blank']
 
-To download the most current version of the Ardunio IDE use this web https://www.arduino.cc/en/software[Link,window='_blank']
+To download the most current version of the Arduino IDE use this web https://www.arduino.cc/en/software[Link,window='_blank']
 
 In order to use Arduino to upload code to Otto the Arduino libraries need to be installed.
-////
+
 There is a video on `How to Calibrate Otto DIY` outlines the Arduino libraries process.  Unfortunately the Zip file discussed in this video has not been located.
 
-The `How to Calibrate Otto DIY` video can be viewed or downloaded from this link::videos/CalibrateOtto.mp4[Video Link, window="_blank"]
+The `How to Calibrate Otto DIY` video can be viewed or downloaded from this link::{web-site}/videos/CalibrateOtto.mp4[Video Link, window="_blank"]
 
 .Calibrate Otto
-video::videos/CalibrateOtto.mp4[Calibrate Otto, width=640, height=480, start=0, end=999999, align='center']
-////
+video::{web-site}/videos/CalibrateOtto.mp4[ width=640, height=480, start=0, end=999999, align='center']
+
 
 
 Download the *latest* version of the Otto library from GIT at this https://github.com/OttoDIY/OttoDIYLib[Link, window='_blank']
 
-There is a local copy of the Arduino library in these notes at this link:files/OttoDIYLib-master.zip[Link, window='_blank']
+There is a local copy of the Arduino library in these notes at this link:largefiles/OttoDIYLib-master.zip[Link, window='_blank']
 
-. Download the .zip Otto libraries here link:fileslarge/OttoDIYLib-master.zip[Download, window='_blank']
+. Download the .zip Otto libraries here link:{web-site}/largefileslarge/OttoDIYLib-master.zip[Download, window='_blank']
 . Open Arduino IDE and navigate to Sketch -> Include Library -> Add .ZIP Library. At the top of the drop down list, select the option to `Add .ZIP Library`
 . You will be prompted to select the library. Navigate to the .zip file's location, that you just downloaded and open it.
 . In the main window you will see in the bottom back area a message that it has been installed.
 . To verify they are properly installed, go to Sketch -> Include Library menu. You should now see the library at the bottom of the drop-down menu That means is ready to use Otto example codes! you can find them in File -> Examples -> OttoDIYLib for more details or other way to install libraries visit this link
   
 
-IMPORTANT: Set the device to `Ardunio Nano` for Otto.
+IMPORTANT: Set the device to `Arduino Nano` for Otto.
 
-IMPORTANT:  The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a clone.
+IMPORTANT:  The Boot loader is the AtMega 328 (Old Boot loader) because the mini in Otto is a clone.
 
 ==== Determine and set Comm port
 
-The Ardunio IDE when used with the USB Port is assigned to a Comm port.
+The Arduino IDE when used with the USB Port is assigned to a Comm port.
 
 Open the Device Manager and then click on the `Ports (Comm  & LPT)` there may be some ports already assigned to other serial devices.
 
@@ -190,10 +190,11 @@ Plug in Blockly to a USB port, listen for the Window beep acknowledging Blockly,
 image::ports.png[Comm Ports, alt='Alt Tag', align='center']  
 
 
-==== Sample Ardunio Script
+==== Sample Arduino Script
 
 There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.
 
+[source,ardunio]
 .Sample servo test
 ----
 include::files/Otto_ServoTest.ino[Servo Test]
@@ -224,11 +225,11 @@ These two scripts are in the `Examples` of Blockly image:xxyyzz-place-image-here
 
 *Alignment Walk* - Test Otto walking, check Otto walks straight as possible.
 
-There are other BLOC's to test the Pizo speaker, touch sensor and the ultrasonic sensor
+There are other BLOC's to test the Piezo speaker, touch sensor and the ultrasonic sensor
 
 The Dance BLOC is a very good script to show Otto dancing, great way to check Otto working
 
-By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was designed.
+By combing the Dance, touch sensor and Piezo BLOCs together the BLOC below was designed.
 
 .BLOC Diagram
 image:xxyyzz-place-image-here.png[]
@@ -240,7 +241,7 @@ When the BLOC is converted to C++ to Otto it looks like
 
 == Bluetooth
 
-A special Ardunio script is required for using the OTTO app on the cellphone.
+A special Arduino script is required for using the OTTO app on the cellphone.
 
 .Bluetooth Script
 [source,arduino]
@@ -279,11 +280,11 @@ include::files/xxyyzzdummy.txt
 
 How to customize the physical Otto https://www.ottodiy.com/blog/design[4 easy ways to design your own robot, window='_blank']
 
-OTTO Ardunio library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
+OTTO Arduino library: link:fileslarge/OttoDIYLib-master.zip[Download, window="_blank"]
 
 OTTO BLockly program: link:fileslarge/OttoBlockly-Setup-1.4.4.exe[Download, window="_blank"]
 
-Ardunio V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
+Arduino V1.0 IDE: link:/fileslarge/arduino-1.8.19-windows.exe[Download, window="_blank"]
 
 OTTO requires current Java runtime link:/fileslarge/jre-8u321-windows-x64.exe[Download, window="_blank"]
 
