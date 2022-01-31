@@ -92,7 +92,7 @@ ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
-dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dt{margin-bottom:.3125em;font-weight:bold}   
 dl dd{margin-bottom:1.25em}
 abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
 abbr{text-transform:none}
@@ -463,7 +463,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_arduino">4.1. Arduino</a>
 <ul class="sectlevel3">
 <li><a href="#_determine_and_set_comm_port">4.1.1. Determine and set Comm port</a></li>
-<li><a href="#_sample_ardunio_script">4.1.2. Sample Ardunio Script</a></li>
+<li><a href="#_sample_arduino_script">4.1.2. Sample Arduino Script</a></li>
 </ul>
 </li>
 <li><a href="#_servo_alignment">4.2. Servo Alignment</a></li>
@@ -714,24 +714,38 @@ difficult to get out</p>
 <div class="sect2">
 <h3 id="_arduino">4.1. Arduino</h3>
 <div class="paragraph">
-<p>The most current version of the Ardunio IDE as of this document date is 1.8.19 and can be downloaded from this <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/files/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Link</a></p>
+<p>The most current version of the Arduino IDE as of this document date is 1.8.19 and can be downloaded from this <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/files/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Link</a></p>
 </div>
 <div class="paragraph">
-<p>To download the most current version of the Ardunio IDE use this web <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Link</a></p>
+<p>To download the most current version of the Arduino IDE use this web <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Link</a></p>
 </div>
 <div class="paragraph">
 <p>In order to use Arduino to upload code to Otto the Arduino libraries need to be installed.</p>
 </div>
 <div class="paragraph">
+<p>There is a video on <code>How to Calibrate Otto DIY</code> outlines the Arduino libraries process.  Unfortunately the Zip file discussed in this video has not been located.</p>
+</div>
+<div class="paragraph">
+<p>The <code>How to Calibrate Otto DIY</code> video can be viewed or downloaded from this link::https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/videos/CalibrateOtto.mp4[Video Link, window="_blank"]</p>
+</div>
+<div class="videoblock text-center">
+<div class="title">Calibrate Otto</div>
+<div class="content">
+<video src="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/videos/CalibrateOtto.mp4#t=0,999999" width="640" height="480" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="paragraph">
 <p>Download the <strong>latest</strong> version of the Otto library from GIT at this <a href="https://github.com/OttoDIY/OttoDIYLib" target="_blank" rel="noopener">Link</a></p>
 </div>
 <div class="paragraph">
-<p>There is a local copy of the Arduino library in these notes at this <a href="files/OttoDIYLib-master.zip" target="_blank" rel="noopener">Link</a></p>
+<p>There is a local copy of the Arduino library in these notes at this <a href="largefiles/OttoDIYLib-master.zip" target="_blank" rel="noopener">Link</a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Download the .zip Otto libraries here <a href="fileslarge/OttoDIYLib-master.zip" target="_blank" rel="noopener">Download</a></p>
+<p>Download the .zip Otto libraries here <a href="https://pwc-lms.com/OpenStuff/BlogPosts/OttoPlus/largefileslarge/OttoDIYLib-master.zip" target="_blank" rel="noopener">Download</a></p>
 </li>
 <li>
 <p>Open Arduino IDE and navigate to Sketch &#8594; Include Library &#8594; Add .ZIP Library. At the top of the drop down list, select the option to <code>Add .ZIP Library</code></p>
@@ -754,7 +768,7 @@ difficult to get out</p>
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Set the device to <code>Ardunio Nano</code> for Otto.
+Set the device to <code>Arduino Nano</code> for Otto.
 </td>
 </tr>
 </table>
@@ -766,7 +780,7 @@ Set the device to <code>Ardunio Nano</code> for Otto.
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a clone.
+The Boot loader is the AtMega 328 (Old Boot loader) because the mini in Otto is a clone.
 </td>
 </tr>
 </table>
@@ -774,7 +788,7 @@ The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a
 <div class="sect3">
 <h4 id="_determine_and_set_comm_port">4.1.1. Determine and set Comm port</h4>
 <div class="paragraph">
-<p>The Ardunio IDE when used with the USB Port is assigned to a Comm port.</p>
+<p>The Arduino IDE when used with the USB Port is assigned to a Comm port.</p>
 </div>
 <div class="paragraph">
 <p>Open the Device Manager and then click on the <code>Ports (Comm  &amp; LPT)</code> there may be some ports already assigned to other serial devices.</p>
@@ -790,14 +804,14 @@ The Boot loader is the AtMega 328 (Old Bootloader) because the mini in Otto is a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_sample_ardunio_script">4.1.2. Sample Ardunio Script</h4>
+<h4 id="_sample_arduino_script">4.1.2. Sample Arduino Script</h4>
 <div class="paragraph">
 <p>There is a very small script that will cycle the Servos, this is like a confidence script that the Nano is working and the code is getting loaded.</p>
 </div>
 <div class="listingblock">
 <div class="title">Sample servo test</div>
 <div class="content">
-<pre>/*
+<pre class="highlight"><code class="language-ardunio" data-lang="ardunio">/*
 base info from https://www.arduino.cc/en/Reference/Servo
 test sketch made by Nicu FLORICA (niq_ro) for verify position for Otto legs  
 */
@@ -836,7 +850,7 @@ void loop() {
   myservo3.write(90);                  // sets the servo 3 position 
   myservo4.write(90);                  // sets the servo 4 position
 
-  }</pre>
+  }</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -886,13 +900,13 @@ This script could cause the legs to rotate to far to the left or right causing t
 <p><strong>Alignment Walk</strong> - Test Otto walking, check Otto walks straight as possible.</p>
 </div>
 <div class="paragraph">
-<p>There are other BLOC&#8217;s to test the Pizo speaker, touch sensor and the ultrasonic sensor</p>
+<p>There are other BLOC&#8217;s to test the Piezo speaker, touch sensor and the ultrasonic sensor</p>
 </div>
 <div class="paragraph">
 <p>The Dance BLOC is a very good script to show Otto dancing, great way to check Otto working</p>
 </div>
 <div class="paragraph">
-<p>By combing the Dance, touch sensor and Pizo BLOCs together the BLOC below was designed.</p>
+<p>By combing the Dance, touch sensor and Piezo BLOCs together the BLOC below was designed.</p>
 </div>
 <div class="paragraph">
 <div class="title">BLOC Diagram</div>
@@ -911,7 +925,7 @@ This script could cause the legs to rotate to far to the left or right causing t
 <h2 id="_bluetooth">5. Bluetooth</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A special Ardunio script is required for using the OTTO app on the cellphone.</p>
+<p>A special Arduino script is required for using the OTTO app on the cellphone.</p>
 </div>
 <div class="listingblock">
 <div class="title">Bluetooth Script</div>
@@ -953,13 +967,13 @@ The code examples can be used to integrate Bluetooth into new scripts.</p>
 <p>How to customize the physical Otto <a href="https://www.ottodiy.com/blog/design" target="_blank" rel="noopener">4 easy ways to design your own robot</a></p>
 </div>
 <div class="paragraph">
-<p>OTTO Ardunio library: <a href="fileslarge/OttoDIYLib-master.zip" target="_blank" rel="noopener">Download</a></p>
+<p>OTTO Arduino library: <a href="fileslarge/OttoDIYLib-master.zip" target="_blank" rel="noopener">Download</a></p>
 </div>
 <div class="paragraph">
 <p>OTTO BLockly program: <a href="fileslarge/OttoBlockly-Setup-1.4.4.exe" target="_blank" rel="noopener">Download</a></p>
 </div>
 <div class="paragraph">
-<p>Ardunio V1.0 IDE: <a href="/fileslarge/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Download</a></p>
+<p>Arduino V1.0 IDE: <a href="/fileslarge/arduino-1.8.19-windows.exe" target="_blank" rel="noopener">Download</a></p>
 </div>
 <div class="paragraph">
 <p>OTTO requires current Java runtime <a href="/fileslarge/jre-8u321-windows-x64.exe" target="_blank" rel="noopener">Download</a></p>
@@ -1028,7 +1042,7 @@ More information on ASCIIDoctor can be found at <a href="https://asciidoctor.org
 <div id="footer">
 <div id="footer-text">
 Version 2.1d<br>
-Last updated 2022-01-31 11:55:48 -0500
+Last updated 2022-01-31 12:50:03 -0500
 </div>
 </div>
 </body>
